@@ -1,0 +1,3 @@
+{
+  "fiorino": "0x03fD44c23C38Fb292ada1eEbc1251799f95f2524"
+}
