@@ -21,7 +21,7 @@ export class App {
 
   constructor(routes: Routes[]) {
     this.app = express();
-    this.env = NODE_ENV || 'development';
+    this.env = NODE_ENV || 'production';
     this.port = PORT || 3000;
 
     this.initializeLimits();
@@ -80,7 +80,7 @@ export class App {
   private initializeErrorHandling() {
     this.app.use(ErrorMiddleware);
   }
-
+  
   private initializeLimits() {
     this.app.use(bodyParser.json({ limit: MAX_FILE_SIZE }));
     this.app.use(bodyParser.urlencoded({ limit: MAX_FILE_SIZE, extended: true, parameterLimit: 50000 }));
